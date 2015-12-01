@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<div class='page-title'>
+  <h1>Existing Labels</h1>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @labels.each do |label| %>
+      <div id='label-info' class='form-info parcel'>
+        <h3> <%= label.from_name %> --> <%= label.to_name %> <h3>
+        </br>
+        <%= link_to 'Show', label, class: 'btn btn-default' %>
+        <%= link_to 'Edit', edit_label_path(label), class: 'btn btn-default' %>
+        <%= link_to 'Destroy', label, method: :delete,
+                                      data: { confirm: 'Are you sure?' },
+                                      class: 'btn btn-default' %>
+      </div>
+    <% end %>
+  </tbody>
+</table>
+</br>
+<div class='parcel'>
+  <%= link_to 'New Label', new_label_path, class: 'btn btn-default' %>
+</div>

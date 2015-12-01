@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<div class='parcel'>
+  <img src=<%= @label.label_url %> height=75% width=75%>
+</div>
+</br>
+
+<div class='parcel'>
+  <%= link_to 'Edit', edit_label_path(@label), class: 'btn btn-default'  %> |
+  <%= link_to 'Index', labels_path, class: 'btn btn-default' %> |
+  <%= link_to "Print", '#', class: "btn btn-default",
+                            onclick: 'window.print();return false;' %>
+</div>
