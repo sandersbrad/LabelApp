@@ -17,6 +17,10 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+ #notice {
+   color: rgba(0, 173, 255, 0.67);
+ }
+
  div.form-info {
    background-color: rgba(0, 173, 255, 0.67);
    padding: 15px;
